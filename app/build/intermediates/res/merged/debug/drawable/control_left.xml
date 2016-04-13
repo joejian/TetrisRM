@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape
+            android:shape= "rectangle"  >
+            <solid android:color="@color/black"/>
+            <stroke android:width="3dp"
+                android:color="@color/almostblack"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/left" />
+</layer-list><!-- From: file:/Users/Kirby/AndroidStudioProjects/TetrisRM/app/src/main/res/drawable/control_left.xml -->

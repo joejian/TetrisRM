@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="100"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:background="@drawable/cell_shape"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="30"
+            android:background="@drawable/cell_shape"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/newGame"
+                android:textSize="12dp"
+                android:onClick="newGame"
+                android:layout_weight="2"
+                android:background="@drawable/cell_shape"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:orientation="vertical"
+                android:weightSum="12">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape"
+                    />
+
+                <TextView
+                    android:id="@+id/scoreview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape"
+                    android:layout_weight="3"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/cell_shape"
+                    />
+
+                <GridView
+                    android:id="@+id/holdview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:numColumns="4"
+                    android:contentDescription="@string/cell"
+                    android:background="@drawable/cell_shape"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="9"/>
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/crotateview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@drawable/rotate_left" />
+
+            <ImageView
+                android:id="@+id/leftview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:background="@drawable/control_left" />
+
+            <ImageView
+                android:id="@+id/leftdownview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@drawable/control_down" />
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="210dp"
+            android:layout_height="fill_parent"
+            android:numColumns="10"
+            android:columnWidth="21dp"
+            android:gravity="center"
+            android:background="@drawable/borders"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@null"
+            android:clipChildren="true"
+            android:padding="0dp"
+            android:stretchMode="columnWidth"
+            android:layout_margin="1dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/gridview"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:weightSum="30"
+            android:background="@drawable/cell_shape"
+            >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="@string/start"
+                android:onClick="start"
+                android:background="@drawable/cell_shape"
+                android:textColor="@color/white"
+                android:layout_weight="2" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:background="@drawable/cell_shape"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:weightSum="10">
+
+                    <GridView
+                        android:id="@+id/nextview0"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:numColumns="4"
+                        android:columnWidth="10dp"
+                        android:contentDescription="@string/cell"
+                        android:background="@drawable/cell_shape"
+                        android:layout_gravity="center" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"/>
+                    <GridView
+                        android:id="@+id/nextview1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:numColumns="4"
+                        android:columnWidth="10dp"
+                        android:contentDescription="@string/cell"
+                        android:background="@drawable/cell_shape"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"/>
+                    <GridView
+                        android:id="@+id/nextview2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:numColumns="4"
+                        android:columnWidth="10dp"
+                        android:contentDescription="@string/cell"
+                        android:background="@drawable/cell_shape"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/rotateview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@drawable/rotate_right" />
+
+            <ImageView
+                android:id="@+id/rightview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:background="@drawable/control_right" />
+
+            <ImageView
+                android:id="@+id/rightdownview"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@drawable/control_down"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/Kirby/AndroidStudioProjects/TetrisRM/app/src/main/res/layout/activity_tetris.xml -->

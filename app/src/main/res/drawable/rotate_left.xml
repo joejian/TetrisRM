@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape
+            android:shape= "rectangle"  >
+            <solid android:color="@color/black"/>
+            <stroke android:width="3dp"
+                android:color="@color/almostblack"/>
+        </shape>
+    </item>
+    <item>
+        <rotate
+            android:fromDegrees="90.0"
+            android:toDegrees="0.0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:drawable="@drawable/crotate"/>
+    </item>
+</layer-list>
